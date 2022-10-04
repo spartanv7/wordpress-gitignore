@@ -1,0 +1,117 @@
+# -----------------------------------------------------------------
+# .gitignore for WordPress
+# -----------------------------------------------------------------
+#
+# Version: 1.0.0
+# Source: https://github.com/spartanv7/wordpress-gitignore
+#
+# This file is optimized for a standard WordPress installation
+# directory structure. If your installation differs from standard
+# then you may have to modify this file.
+#
+# This file specifies intentionally untracked files to ignore:
+# http://git-scm.com/docs/gitignore
+#
+# To ignore uncommitted changes in a file that is already tracked,
+# use `git update-index --assume-unchanged`.
+#
+# To stop tracking a file that is currently tracked,
+# use `git rm --cached`
+#
+# -----------------------------------------------------------------
+
+# Ignore everything in the root except the "wp-content" directory.
+# -----------------------------------------------------------------
+/*
+!wp-content/
+
+# Ignore all files starting with .
+# -----------------------------------------------------------------
+.*
+
+# Ignore all files that start with ~
+# -----------------------------------------------------------------
+~*
+
+# Ignore OS generated files
+# -----------------------------------------------------------------
+ehthumbs.db
+Thumbs.db
+
+# Ignore Editor files
+# -----------------------------------------------------------------
+*.komodoproject
+*.sublime-project
+*.sublime-workspace
+
+# Ignore log directories, files & databases
+# -----------------------------------------------------------------
+logs
+*.log
+
+# Ignore databases and data-related files
+# -----------------------------------------------------------------
+*.sql
+*.sqlite
+*.csv
+*.tsv
+*.xml
+
+# Ignore dependency directories
+# -----------------------------------------------------------------
+bower_components/
+jspm_packages/
+node_modules/
+
+# Ignore compiled files
+# -----------------------------------------------------------------
+*.bat
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Ignore packaged files
+# -----------------------------------------------------------------
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Ignore everything in the "wp-content" directory except:
+#
+# mu-plugins/ - Must use plugins
+# plugins/
+# themes/
+# uploads/
+#
+# -----------------------------------------------------------------
+wp-content/*
+!wp-content/mu-plugins/
+!wp-content/plugins/
+!wp-content/themes/
+!wp-content/uploads/
+
+# Ignore default WordPress plugins and index
+# -----------------------------------------------------------------
+wp-content/plugins/akismet/
+wp-content/plugins/index.php
+wp-content/plugins/hello.php
+
+# Ignore specific themes/theme files and index
+# -----------------------------------------------------------------
+wp-content/themes/twenty*/
+wp-content/themes/index.php
+
+# Whitelist - include these files/directories in Git
+# -----------------------------------------------------------------
+!/.gitignore
+!/.editorconfig
+!/.htaccess
+!/readme.md
